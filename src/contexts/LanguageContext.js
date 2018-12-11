@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 const Context = React.createContext("english"); // To create context object.
 
@@ -12,7 +12,7 @@ export class LanguageStore extends Component {
   render() {
     return (
       <Context.Provider
-        value={{ ...this.state, onLanguageChage: this.onLanguageChange }}
+        value={{ ...this.state, onLanguageChange: this.onLanguageChange }}
       >
         {this.props.children}
       </Context.Provider>
